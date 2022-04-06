@@ -15,6 +15,16 @@ public class DLL {
         }
     }
 
+    public static Node get(int idx){
+        Node temp=head;
+        int counter=1;
+        while(counter!=idx){
+            temp=temp.next;
+            counter++;
+        }
+        return temp;
+    }
+
     public static void insertAtFirst(int val){
         Node node=new Node(val);
         node.next=head;
@@ -51,13 +61,15 @@ public class DLL {
             return;
 
         }
-
+        /*
         int count=1;
         Node temp=head;
         while(count!=idx){
             temp=temp.next;
             count++;
         }
+         */
+        Node temp=get(idx);
         temp.prev.next=temp.next;
     }
 

@@ -16,9 +16,9 @@ public class getSubsequence {
         char ch=str.charAt(ptr);
         ArrayList<String> resStr=getSS(str,ptr+1);
         ArrayList<String> res=new ArrayList<>();
-        for(int i=0;i<resStr.size();i++){
-            res.add(resStr.get(i));
-            res.add(ch+resStr.get(i));
+        for(String rss: resStr){
+            res.add(rss);
+            res.add(ch+rss);
         }
         return res;
         

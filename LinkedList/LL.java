@@ -12,7 +12,7 @@ public class LL {
         Node next;
         Node(int d){
             data=d;
-            next=null;
+            next=head;
         }
     }
 
